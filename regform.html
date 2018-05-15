@@ -1,0 +1,121 @@
+<html>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+
+<body>
+<style>
+input:required,
+textarea:required {
+  border-color: red !important;
+}
+input:required + label {
+  color: red;
+}
+
+form {
+  padding: 10px 20px; 
+  max-width: 300px;
+  margin: 10px auto;
+  --background: #FDB2C5;
+  
+}
+
+input,textarea {
+--background:#FDB2F1;
+}
+
+
+form div {
+  padding: 5px;
+}
+label {
+  display: block;
+}
+input + label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  border: 1px solid #999;
+  padding: 5px;
+  width: 100%;
+}
+h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+  font-size:15px;
+
+}
+
+
+
+</style>
+
+
+
+<h1><center>Registation Form</center><h1>
+<form>
+<h1>1.Sign Up</h1>
+User id:
+<input type="text" name="userid" size="12" required><br>
+<br>
+Password:
+<input type="text" name="passid" size="12" required /><br>
+<br>
+Name:
+<input type="text" name="firstname" size="50" required /><br>
+<br>
+address:
+<input type="text" name="address" size="50"><br>
+<br>
+Contry:
+<select name="contry" required>
+<option selected=""value="default">(Please select a country)</option>
+<option value="AF">Australia</option>
+<option value="AL">Canada</option>
+<option value="DZ">India</option>
+<option value="AS">Russia</option>
+<option value="AD">USA</option>
+</select>
+<br>
+ZIP Code:
+<input type="number" name="code" size="12" required><br>
+<br>
+Email:
+<input type="text" name="email"  size="50" required><br>
+<br>
+Date:
+<input type="text" id="tbDate" placeholder="Select Date"x/>
+<br><br>
+Sex:
+<input type="radio" id="cc1" name="smale" value="Male"  /><span>Male</span>
+<input type="radio" id="cc2" name="smale" value="Female" /><span>Female</span>
+<br><br>
+Language:
+<input type="checkbox" name="en" value="en" checked /><span>English</span>
+<input type="checkbox" name="nonen" value="noen" /><span>Non English</span>
+<br><br>
+About:
+<textarea type="desc" id="desc"></textarea>
+<br><br>
+<input type="submit" name="submit" value="Submit" onclick="myfunction()" />
+<br>
+</form>
+</body>
+<script>
+function myfunction(){
+document.body.style.backgroundImage = "url('Laptop Wallpapers Free 1.jpg')";
+}
+    $(document).ready(function () {
+        $('input[id$=tbDate]').datepicker({   
+		dateFormat: 'dd-MM-yy',
+		 minDate: '+1D',
+		 maxDate: '+28D',
+});
+    });
+</script>
+</html>
